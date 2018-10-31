@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./dev",
     "module": "commonjs",
+    "esModuleInterop": true,
     "target": "es6",
-    "sourceMap": true
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "rootDir": "./src",
+    "outDir": "./build",
+    "watch": true
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
-    "node_modules"
+    "static"
   ]
 }

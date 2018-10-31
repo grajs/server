@@ -7,12 +7,13 @@
     "fs-extra": "^7.0.0",
     "koa": "^2.5.3",
     "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "koa-router": "^7.4.0"
+    "supervisor": "^0.12.0"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "echo \"Error: no test specified\" && exit 1"
+    "dev": "supervisor -w build ./build/server.js"
   },
   "author": "",
   "license": "ISC"
