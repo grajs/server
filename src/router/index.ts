@@ -1,6 +1,10 @@
-const Router = require('koa-router')
+import Router from 'koa-router'
+import Body from 'koa-body'
+
+
 const router = new Router()
-router.get('/', (ctx: any, next: Function) => {
-    ctx.body = 'hello word'
+router.post('/post', Body(), ctx => {
+    console.log(ctx.request)
+    ctx.body = JSON.stringify(ctx.request.body)
 })
 export default router

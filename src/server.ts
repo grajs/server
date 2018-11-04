@@ -1,6 +1,8 @@
 import Koa from 'koa'
+import Static from 'koa-static'
 import router from './router/index'
 
-const server = new Koa()
-server.use(router.routes()).use(router.allowedMethods())
-server.listen(3000)
+const app = new Koa()
+app.use(Static())
+app.use(router.routes()).use(router.allowedMethods())
+app.listen(3000)
