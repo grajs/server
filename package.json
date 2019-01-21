@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "fs-extra": "^7.0.0",
-    "koa": "^2.5.3",
+    "koa": "^2.6.2",
     "koa-body": "^4.0.4",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
@@ -13,13 +13,15 @@
     "pm2": "^3.2.2"
   },
   "devDependencies": {
-    "@types/node": "^10.12.3"
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.38",
+    "@types/koa-static": "^4.0.0",
+    "@types/node": "^10.12.18",
+    "concurrently": "^4.1.0"
   },
   "scripts": {
-    "start": "pm2 start ./build/server.js --watch",
-    "stop": "pm2 stop ./build/server.js",
-    "restart": "pm2 restart ./build/server.js --watch",
-    "list": "pm2 list"
+    "dev": "concurrently \"tsc&&pm2 start dist/index.js --watch\" \"tsc --watch\"",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC"
