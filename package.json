@@ -7,22 +7,24 @@
     "fs-extra": "^7.0.0",
     "koa": "^2.6.2",
     "koa-body": "^4.0.4",
+    "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "mysql": "^2.16.0",
-    "pm2": "^3.2.2"
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
+    "@types/koa-mount": "^3.0.1",
     "@types/koa-router": "^7.0.38",
     "@types/koa-static": "^4.0.0",
     "@types/node": "^10.12.18",
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
-    "dev": "concurrently \"tsc&&pm2 start dist/index.js --watch\" \"tsc --watch\"",
+    "dev": "concurrently \"tsc&&nodemon build\" \"tsc --watch\"",
     "build": "tsc"
   },
-  "author": "",
+  "author": "liujianhua",
   "license": "ISC"
 }
