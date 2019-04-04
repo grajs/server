@@ -19,11 +19,13 @@
     "@types/koa-static": "^4.0.0",
     "@types/node": "^10.12.18",
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "typescript": "^3.4.1"
   },
   "scripts": {
-    "dev": "concurrently \"tsc&&nodemon build\" \"tsc --watch\"",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node build",
+    "dev": "concurrently \"tsc&&nodemon build\" \"tsc --watch\""
   },
   "author": "liujianhua",
   "license": "ISC"
