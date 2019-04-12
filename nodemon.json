@@ -1,4 +1,4 @@
 {
-  "ext": "ts,js,json",
-  "watch": ["src"]
+  "ext": "js,json",
+  "watch": ["dist"]
 }

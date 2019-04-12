@@ -25,8 +25,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node build",
-    "dev": "concurrently \"tsc&&nodemon build\" \"tsc --watch\""
+    "start": "node dist",
+    "dev": "concurrently \"tsc&&nodemon dist\" \"tsc --watch\""
   },
   "author": "liujianhua",
   "license": "ISC"
